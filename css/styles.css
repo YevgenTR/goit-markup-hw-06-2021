@@ -50,6 +50,10 @@ a {
   text-decoration: none;
 }
 
+textarea {
+  resize: none;
+}
+
 /* Эталонный контейнер */
 .container {
   width: 1200px;
@@ -322,13 +326,76 @@ a {
   padding-right: 40px;
 }
 
-textarea {
-  resize: none;
-}
-
 .modal-form-field {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--gray-text-color);
+}
+
+.modal-form-field input:hover {
+  cursor: pointer;
+  border: var(--select-color);
+}
+
+.modal-form-field input {
+  padding-left: 12px;
+  padding-top: 11px;
+  padding-bottom: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-form-field label {
+  margin-bottom: 4px;
+}
+
+.textarea {
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.policy,
+.policy-link {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--gray-text-color);
+}
+
+.policy-cont {
+  margin-bottom: 30px;
+}
+.policy-link {
+  color: var(--select-color);
+  text-decoration-line: underline;
+}
+.send-button-cont {
+  text-align: center;
+}
+
+.send-button {
+  width: 200px;
+  height: 50px;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+  border-radius: 4px;
+  background-color: var(--select-color);
+  color: var(--white-text-color);
+  /* outline: none; */
+  border: none;
+}
+
+.send-button:hover {
+  cursor: pointer;
 }
 
 .form-title {
@@ -338,7 +405,6 @@ textarea {
   text-align: center;
   letter-spacing: 0.03em;
   padding-bottom: 12px;
-
   color: #212121;
 }
 
@@ -350,7 +416,6 @@ textarea {
   outline: none;
   background-color: var(--white-text-color);
   color: var(--select-color);
-  /* box-shadow: 0 0 0 2px var(--white-text-color); */
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -852,11 +917,18 @@ textarea {
   font-size: 16px;
   line-height: 20px;
   margin-right: 12px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   align-items: center;
   letter-spacing: 0.03em;
   color: var(--white-color-06);
   background-color: var(--background-hero-footer);
   outline: none;
+}
+
+.footer-email-input::placeholder {
+  color: var(--white-color-06);
 }
 
 .subscreption-form {
