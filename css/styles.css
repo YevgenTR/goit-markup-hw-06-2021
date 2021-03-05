@@ -336,13 +336,15 @@ textarea {
   color: var(--gray-text-color);
 }
 
-.modal-form-field input:hover {
+.modal-form-field input:hover,
+.modal-form-field input:focus {
   cursor: pointer;
-  border: var(--select-color);
+  border: 1px solid var(--select-color);
+  outline: none;
 }
 
 .modal-form-field input {
-  padding-left: 12px;
+  padding-left: 42px;
   padding-top: 11px;
   padding-bottom: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
