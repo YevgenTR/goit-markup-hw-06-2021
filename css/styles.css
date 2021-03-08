@@ -470,6 +470,7 @@ textarea {
   background-size: contain;
   background-origin: border-box;
 }
+
 .policy-cont {
   display: inline-flexbox;
   width: 100%;
@@ -479,10 +480,12 @@ textarea {
   text-align: center;
   justify-content: center;
 }
+
 .policy-link {
   color: var(--select-color);
   text-decoration-line: underline;
 }
+
 .send-button-cont {
   text-align: center;
 }
