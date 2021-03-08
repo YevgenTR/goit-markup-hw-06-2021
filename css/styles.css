@@ -262,6 +262,8 @@ textarea {
   border-radius: 4px;
   padding: 10px 32px;
   border: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* backdrop */
@@ -365,6 +367,11 @@ textarea {
   outline: none;
 }
 
+.text {
+  display: inline-block;
+  width: 100%;
+}
+
 .input-cont:hover .modal-field-icon {
   fill: var(--select-color);
 }
@@ -420,14 +427,57 @@ textarea {
 
 .policy,
 .policy-link {
+  display: flex;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--gray-text-color);
+  align-items: center;
+  justify-content: center;
 }
 
+.policy-link {
+  margin-left: 4px;
+}
+
+.checkbox {
+  display: flex;
+  appearance: none;
+  align-items: center;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 1.75px solid var(--black-text-color);
+  border-radius: 2px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:hover + .checkbox-icon,
+.checkbox:focus + .checkbox-icon {
+  border: 1.75px solid var(--select-color);
+}
+
+.checkbox:checked + .checkbox-icon {
+  background: var(--select-color);
+  border: 1.75px solid var(--select-color);
+  background-image: url(/images/icons/check-box.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
 .policy-cont {
+  display: inline-flexbox;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
+  text-align: center;
+  justify-content: center;
 }
 .policy-link {
   color: var(--select-color);
@@ -440,16 +490,19 @@ textarea {
 .send-button {
   width: 200px;
   height: 50px;
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
   border-radius: 4px;
   background-color: var(--select-color);
   color: var(--white-text-color);
-  /* outline: none; */
   border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.send-button:hover {
+.send-button:hover,
+.send-button:focus {
+  outline: none;
   cursor: pointer;
+  border: 1.5px solid black;
 }
 
 /* Наши принципы */
